@@ -25,7 +25,7 @@ SECRET_KEY = 'd5#nx6dk7$mxoz0cneae%zi%)j#rs=q(vtug32p+6z5^7%p7+_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://dhillon-bankingapp.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1',,'https://dhillon-bankingapp.herokuapp.com']
 
 
 # Application definition

@@ -24,7 +24,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'd5#nx6dk7$mxoz0cneae%zi%)j#rs=q(vtug32p+6z5^7%p7+_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (os.environ.get("DEBUG_VALUE"))=="True"
+DEBUG = True 
+#(os.environ.get("DEBUG_VALUE"))=="True"
 
 ALLOWED_HOSTS = ['127.0.0.1' ,'https://dhillon-bankingapp.herokuapp.com']
 

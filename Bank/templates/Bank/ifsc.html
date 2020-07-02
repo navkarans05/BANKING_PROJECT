@@ -1,0 +1,19 @@
+{% extends 'Bank/base.html' %}
+{%  load crispy_forms_tags %}
+
+{% block content%}
+<div class="content-section">
+  <form  method="POST"  action="{% url "details" %}">
+    {% csrf_token %}
+    <fieldset class="form-group" >
+      <legend class="border-bottom mb-4">Enter IFSC Code</legend>
+      <input type="text" name="ifsc" value="">
+
+    </fieldset>
+    <div class="form-group">
+      <button type="submit" class="btn btn-info" name="button">Proceed</button>
+    </div>
+  </form>
+
+</div>
+{% endblock content %}

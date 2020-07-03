@@ -1,9 +1,0 @@
-{% extends 'Bank/base.html' %}
-{% block content%}
-<ul>
-    {% for dtl in details %}
-    <li><h4>  IFSC             BANK ID  BRANCH</h4></li>
-    <li>{{ dtl.ifsc }}  {{dtl.bank_id}}  {{dtl.branch}} {{ dtl.address }}  {{dtl.city}}  {{dtl.district}} {{ dtl.state }}  {{dtl.bank_name}} </li>
-    {% endfor %}
-</ul>
-{% endblock content %}

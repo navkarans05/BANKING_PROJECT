@@ -1,9 +1,7 @@
 from django import forms
-from .models import detail
 
-class DetailForm(forms.ModelForm):
-    ifsc=forms.CharField()
 
-    class Meta:
-        model = detail
-        fields = ['ifsc']
+class BankForm(forms.Form):
+    ifs_code = forms.CharField(max_length=15, required=False)
+    bank_name = forms.CharField(max_length=100, required=False)
+    city_name = forms.CharField(max_length=50, required=False)

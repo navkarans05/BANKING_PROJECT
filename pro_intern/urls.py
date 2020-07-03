@@ -13,18 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+from django.conf.urls import re_path
 from django.contrib import admin
-from django.urls import path
-from Bank import views
-#from Bank.views import detailAPIView,ifscAPIView
+from django.conf.urls import handler404
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import include
 
 urlpatterns = [
+                  re_path(r'^admin/', admin.site.urls),
+                  re_path(r'^', include('Bank.urls')),
+              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-    path('admin/', admin.site.urls),
-#    path('',detailAPIView.as_view(),name="details"),
-    path('',views.detail_list,name="details"),
-    path('ifsc/',views.ifsc_list,name="ifsc"),
-
-
-    #path('ifscgg/',ifscAPIView.as_view(),name="ifsc")
-]
+handler404 = 'Bank.views.error_404'  # Custom 404 error response

@@ -27,7 +27,7 @@ SECRET_KEY = 'd5#nx6dk7$mxoz0cneae%zi%)j#rs=q(vtug32p+6z5^7%p7+_'
 DEBUG = True
 #(os.environ.get("DEBUG_VALUE"))=="True"
 
-ALLOWED_HOSTS = ['127.0.0.1' ,'https://dhillon-banking.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1' ,'https://dhillon-bankingapp.herokuapp.com']
 
 
 # Application definition
